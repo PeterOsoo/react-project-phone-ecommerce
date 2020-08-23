@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import logo from "../logo.svg"
 import styled from "styled-components"
-import { ButtonContaier } from "./Button"
+import { ButtonContainer } from "./Button"
 
 class NavBar extends Component {
 	render() {
@@ -24,11 +24,11 @@ class NavBar extends Component {
 				</ul>
 
 				<Link to="/cart" className="ml-auto">
-					<ButtonContaier>
+					<ButtonContainer>
 						<span className="mr-2">
 							<i className="fas fa-cart-plus"></i> cart
 						</span>
-					</ButtonContaier>
+					</ButtonContainer>
 				</Link>
 			</NavWrapper>
 		)
