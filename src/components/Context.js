@@ -25,8 +25,18 @@ class ProductProvider extends Component {
 		})
 	}
 
-	handleDetail = () => {
-		console.log("hello from detail")
+	// utility method that gets item according to ID
+	getItem = id => {
+		const product = this.state.products.find(item => item.id === id)
+		return product
+	}
+
+	handleDetail = id => {
+		const product = this.getItem(id)
+		this.setState(() => {
+			//flip detailproduct to a product
+			return { detailProduct: product }
+		})
 	}
 	addToCart = id => {
 		console.log(`hello from add to cart ${id}`)
