@@ -92,9 +92,9 @@ class ProductProvider extends Component {
 		console.log("add totals  ")
 		let subTotal = 0
 		this.state.cart.map(item => (subTotal += item.total))
-		const tempTax = subTotal * 0.1 * 1000
+		const tempTax = subTotal * 0.1
 		const tax = parseFloat(tempTax.toFixed(2))
-		const total = (subTotal + tax) * 1000
+		const total = subTotal + tax
 		this.setState(() => {
 			return {
 				cartSubTotal: subTotal,
@@ -103,8 +103,30 @@ class ProductProvider extends Component {
 			}
 		})
 	}
+
+	// remove single item
 	removeItem = id => {
-		console.log("remove item ")
+		// console.log("remove item ")
+		let tempProducts = [...this.state.products]
+		let tempCart = [...this.state.cart]
+
+		// for the product
+		const index = tempProducts.indexOf(this.getItem(id))
+		let removedProduct = tempProducts[index]
+		removedProduct.inCart = false
+		removedProduct.count = 0
+		removedProduct.total = 0
+
+		tempCart = tempCart.filter(item => {
+			return item.id !== id
+		})
+
+		this.setState(() => {
+			return {
+				cart: [...tempCart],
+				products: [...tempProducts],
+			}
+		}, this.addTotals)
 	}
 
 	// clear products in cart
