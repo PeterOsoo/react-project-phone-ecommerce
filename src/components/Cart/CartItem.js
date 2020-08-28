@@ -22,7 +22,7 @@ const CartItem = ({ item, value }) => {
 			</div>
 			<div className="col-10 mx-auto col-lg-2 ">
 				<strong>
-					<span className="d-lg-none">price :</span> Kshs {price * 1000}
+					<span className="d-lg-none">price :</span> Kshs {price}
 				</strong>
 			</div>
 			<div className="col-10 mx-auto col-lg-2 my-2 my-lg-0 ">
@@ -57,7 +57,7 @@ const CartItem = ({ item, value }) => {
 			</div>
 
 			<div className="col-10 mx-auto col-lg-2 ">
-				<strong>item total : Kshs {total * 1000} </strong>
+				<strong>item total : Kshs {total} </strong>
 			</div>
 		</div>
 	)
