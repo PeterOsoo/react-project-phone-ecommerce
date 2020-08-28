@@ -19,6 +19,18 @@ const CartTotals = ({ value }) => {
 								clear cart
 							</button>
 						</Link>
+						<h5>
+							<span className="text-title"> subtotal :</span>{" "}
+							<strong>Ksh {cartSubTotal} </strong>
+						</h5>
+						<h5>
+							<span className="text-title"> tax :</span>{" "}
+							<strong>Kshs {cartTax} </strong>
+						</h5>
+						<h5>
+							<span className="text-title"> total :</span>{" "}
+							<strong>Kshs {cartTotal} </strong>
+						</h5>
 					</div>
 				</div>
 			</div>
