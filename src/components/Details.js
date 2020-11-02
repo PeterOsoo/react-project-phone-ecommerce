@@ -41,7 +41,7 @@ class Details extends Component {
 									</h4>
 									<h4 className="text-blue">
 										<strong>
-											price : <span>Kshs</span> {price * 1000}
+											price : <span>Kshs</span> {price}
 										</strong>
 									</h4>
 									<p className="text-capitalize font-weight-bold mt-3 mb-0">
